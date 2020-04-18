@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
 
-class Navbar extends Component {
+class Question extends Component {
     render(){
         return (
-            <div>Navbar</div>
+            <div>Poll</div>
         )
     }
 }
 
-export default Navbar
+export default Question

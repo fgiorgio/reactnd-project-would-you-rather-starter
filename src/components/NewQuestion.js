@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-class NewPoll extends Component {
+class NewQuestion extends Component {
     render(){
         return (
             <div>NewPoll</div>
@@ -8,4 +8,4 @@ class NewPoll extends Component {
     }
 }
 
-export default NewPoll
+export default NewQuestion
