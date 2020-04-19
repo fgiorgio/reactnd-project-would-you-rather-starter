@@ -15,7 +15,7 @@ class Navigation extends Component {
                     <Navbar.Collapse id="navbar">
                         <Nav>
                             <Link to="/" className="nav-link">Home</Link>
-                            <Link to="/new" className="nav-link">New Question</Link>
+                            <Link to="/add" className="nav-link">New Question</Link>
                             <Link to="/leaderboard" className="nav-link mr-auto">Leaderboard</Link>
                         </Nav>
                         {authedUser &&

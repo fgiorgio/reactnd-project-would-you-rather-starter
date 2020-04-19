@@ -22,7 +22,7 @@ class App extends Component {
                 <Navigation/>
                 <Route exact path="/" component={() => (<Dashboard/>)}/>
                 <Route path="/login" component={() => (<Login/>)}/>
-                <Route path="/new" component={() => (<NewQuestion/>)}/>
+                <Route path="/add" component={() => (<NewQuestion/>)}/>
                 <Route path="/leaderboard" component={() => (<Leaderboard/>)}/>
                 <Route path="/questions/:qid" component={() => (<QuestionDetail/>)}/>
                 <Route path="/logout" component={() => (<Login/>)}/>

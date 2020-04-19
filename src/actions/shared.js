@@ -1,6 +1,6 @@
-import {_getUsers, _getQuestions, _saveQuestionAnswer} from '../api/_DATA';
-import {addAnswer, receiveUsers} from "./users";
-import {addVote, receiveQuestions} from "./questions";
+import {_getUsers, _getQuestions, _saveQuestionAnswer, _saveQuestion} from '../api/_DATA';
+import {addAnswer, receiveUsers, addQuestionUser} from "./users";
+import {addVote, receiveQuestions, addQuestion} from "./questions";
 
 export function handleInitialData() {
     return (dispatch) => {
@@ -30,6 +30,18 @@ export function handleSubmitAnswer(qid, answer) {
                     answer,
                     authedUser: users[authedUser],
                 }));
+            })
+    }
+}
+
+export function handleSubmitPoll(optionOneText, optionTwoText) {
+    return (dispatch, getState) => {
+        const {authedUser,users} = getState();
+
+        return _saveQuestion({ optionOneText, optionTwoText, author:authedUser })
+            .then((question) => {
+                dispatch(addQuestionUser({question,authedUser:users[authedUser]}));
+                dispatch(addQuestion(question));
             })
     }
 }
