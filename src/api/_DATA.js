@@ -2,7 +2,7 @@ let users = {
   sarahedo: {
     id: 'sarahedo',
     name: 'Sarah Edo',
-    avatarURL: ,
+    avatarURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSaW6B4Q_qw31bidFKpEVBCWpPFQO08zp6hnWMZJpkkvOmwglBU&usqp=CAU',
     answers: {
       "8xf0y6ziyjabvozdd253nd": 'optionOne',
       "6ni6ok3ym7mf1p33lnez": 'optionTwo',
@@ -14,7 +14,7 @@ let users = {
   tylermcginnis: {
     id: 'tylermcginnis',
     name: 'Tyler McGinnis',
-    avatarURL: ,
+    avatarURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTwddS9ySuR1znSyUwmM1dDjhID1b8PoMToKoZgOX27DPzVA4Gm&usqp=CAU',
     answers: {
       "vthrdm985a262al8qx3do": 'optionOne',
       "xj352vofupe1dqz9emx13r": 'optionTwo',
@@ -24,7 +24,7 @@ let users = {
   johndoe: {
     id: 'johndoe',
     name: 'John Doe',
-    avatarURL: ,
+    avatarURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSCOZtARtHPLSTAan45EPws5reFvDFqUlPlMUQuto7imbrW721v&usqp=CAU',
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
       "vthrdm985a262al8qx3do": 'optionTwo',
