@@ -6,15 +6,56 @@ html,body {
     padding: 0;
 }
 
+/* NAVIGATION */
 .navbar-avatar {
     width: 30px;
     height: 30px;
     margin: 0 20px 0 10px;
     object-fit: cover;
 }
+
+/* LOGIN */
 .login-avatar {
     width: 150px;
     height: 150px;
     object-fit: cover;
     margin-bottom: 20px;
+}
+.login-user-input {
+    max-width: 250px;
+    margin: 1rem auto;
+}
+
+/* DASHBOARD */
+.nav-tabs .nav-link {
+    box-sizing: border-box;
+    width: 50%;
+    text-align: center;
+}
+.tab-content {
+    border: 1px solid #DDD;
+    border-top: none;
+    padding: 0 1rem;
+    overflow: hidden;
+}
+
+/* QUESTION */
+.question-avatar {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    vertical-align: top;
+}
+.vote-badge {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+}
+@media (max-width: 576px) {
+    .question-card .card-body {
+        text-align: center;
+    }
+    .question-avatar {
+        margin-bottom: 1rem;
+    }
 }

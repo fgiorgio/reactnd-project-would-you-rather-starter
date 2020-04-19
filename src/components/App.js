@@ -6,51 +6,33 @@ import Dashboard from "./Dashboard";
 import NewQuestion from "./NewQuestion";
 import Login from "./Login";
 import Leaderboard from "./Leaderboard";
-import {Route,Redirect,withRouter} from "react-router-dom";
+import QuestionDetail from "./QuestionDetail";
+import Error from "./Error";
+import {Route} from "react-router-dom";
 
 class App extends Component {
 
-    componentDidMount () {
+    componentDidMount() {
         this.props.dispatch(handleInitialData())
     }
 
-    render(){
-
-        // Redirect user if not authenticated
-        if(this.props.authedUser===null && this.props.location.pathname!=='/login'){
-            return <Redirect to={{
-                pathname: '/login',
-                requestedURL: this.props.location.pathname!=='/logout'?this.props.location.pathname:null
-            }} />
-        }
-
+    render() {
         return (
             <div>
-                <Navigation />
-                <Route exact path="/" render={()=>(
-                    <Dashboard />
-                )}/>
-                <Route path="/login" render={()=>(
-                    <Login />
-                )}/>
-                <Route path="/new" render={()=>(
-                    <NewQuestion />
-                )}/>
-                <Route path="/leaderboard" render={()=>(
-                    <Leaderboard />
-                )}/>
-                <Route path="/questions/:question" render={()=>(
-                    <Leaderboard />
-                )}/>
-                <Route path="/logout" render={()=>(
-                    <Login />
-                )}/>
+                <Navigation/>
+                <Route exact path="/" component={() => (<Dashboard/>)}/>
+                <Route path="/login" component={() => (<Login/>)}/>
+                <Route path="/new" component={() => (<NewQuestion/>)}/>
+                <Route path="/leaderboard" component={() => (<Leaderboard/>)}/>
+                <Route path="/questions/:qid" component={() => (<QuestionDetail/>)}/>
+                <Route path="/logout" component={() => (<Login/>)}/>
+                <Route path="/error" component={() => (<Error/>)}/>
             </div>
         )
     }
 }
 
-export default withRouter(connect((state)=>({
+export default connect((state) => ({
     authedUser: state.authedUser,
     users: state.users,
-}))(App))
+}))(App)
