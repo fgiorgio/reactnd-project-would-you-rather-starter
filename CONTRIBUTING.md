@@ -1,3 +1,3 @@
 # How to contribute
 
-The files in this repository are used in the course videos and are the starting point for all students. Because we want all students to have the same experience going through course, if your pull request alters any of the core files, then it (most likely) will not be merged into the project.
+The files in this repository are used for the final assessment project for Udacity's React & Redux course. Because this is a personal project for the course, if your pull request alters any of the core files, then it (most likely) will not be merged into the project.
