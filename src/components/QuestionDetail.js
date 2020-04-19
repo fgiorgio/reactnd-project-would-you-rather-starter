@@ -16,8 +16,8 @@ class QuestionDetail extends Component {
     handleAnswer = (e) => {
         e.preventDefault()
         const {selectedOption} = this.state;
-        const {dispatch,match} = this.props;
-        dispatch(handleSubmitAnswer(match.params.qid,selectedOption))
+        const {dispatch, match} = this.props;
+        dispatch(handleSubmitAnswer(match.params.qid, selectedOption))
     }
 
     render() {
@@ -74,7 +74,7 @@ class QuestionDetail extends Component {
                                         {unanswered
                                             ?
                                             <Form onSubmit={this.handleAnswer}>
-                                                {['optionOne','optionTwo'].map((option)=>(
+                                                {['optionOne', 'optionTwo'].map((option) => (
                                                     <Form.Check
                                                         key={option}
                                                         type="radio"
@@ -95,15 +95,15 @@ class QuestionDetail extends Component {
                                             </Form>
                                             :
                                             <div>
-                                                {['optionOne','optionTwo'].map((option)=>(
+                                                {['optionOne', 'optionTwo'].map((option) => (
                                                     <Card className="mb-3" key={option}>
                                                         <Card.Body>
                                                             {question[option].text}
-                                                            {question[option].votes.find((element)=>(element===authedUser)) &&
+                                                            {question[option].votes.find((element) => (element === authedUser)) &&
                                                             <Badge variant="primary" className="vote-badge">Your vote</Badge>}
                                                             <ProgressBar
-                                                                now={Math.round(votes[option]*100/totalVotes)}
-                                                                label={Math.round(votes[option]*100/totalVotes)+'%'}
+                                                                now={Math.round(votes[option] * 100 / totalVotes)}
+                                                                label={Math.round(votes[option] * 100 / totalVotes) + '%'}
                                                                 className="mt-2"
                                                             />
                                                             <small>{votes[option]} votes</small>

@@ -19,15 +19,15 @@ class Navigation extends Component {
                             <Link to="/leaderboard" className="nav-link mr-auto">Leaderboard</Link>
                         </Nav>
                         {authedUser &&
-                            <Nav className="ml-auto">
-                                <Nav.Item>
-                                    <Navbar.Text>{users[authedUser].name}</Navbar.Text>
-                                    <Image className="navbar-avatar"
-                                           src={users[authedUser].avatarURL}
-                                           roundedCircle/>
-                                </Nav.Item>
-                                <Link to="/logout" className="nav-link">Logout</Link>
-                            </Nav>
+                        <Nav className="ml-auto">
+                            <Nav.Item>
+                                <Navbar.Text>{users[authedUser].name}</Navbar.Text>
+                                <Image className="navbar-avatar"
+                                       src={users[authedUser].avatarURL}
+                                       roundedCircle/>
+                            </Nav.Item>
+                            <Link to="/logout" className="nav-link">Logout</Link>
+                        </Nav>
                         }
                     </Navbar.Collapse>
                 </Container>

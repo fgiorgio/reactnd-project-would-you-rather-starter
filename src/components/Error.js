@@ -3,7 +3,7 @@ import {Container} from "react-bootstrap";
 import {Link} from "react-router-dom";
 
 class Error extends Component {
-    render(){
+    render() {
         return (
             <Container className="text-center p-5">
                 <h1>Error 404</h1>

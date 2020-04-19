@@ -36,11 +36,11 @@ export function handleSubmitAnswer(qid, answer) {
 
 export function handleSubmitPoll(optionOneText, optionTwoText) {
     return (dispatch, getState) => {
-        const {authedUser,users} = getState();
+        const {authedUser, users} = getState();
 
-        return _saveQuestion({ optionOneText, optionTwoText, author:authedUser })
+        return _saveQuestion({optionOneText, optionTwoText, author: authedUser})
             .then((question) => {
-                dispatch(addQuestionUser({question,authedUser:users[authedUser]}));
+                dispatch(addQuestionUser({question, authedUser: users[authedUser]}));
                 dispatch(addQuestion(question));
             })
     }

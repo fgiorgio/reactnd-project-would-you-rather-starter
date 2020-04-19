@@ -7,14 +7,14 @@ import {Redirect} from "react-router-dom";
 class Dashboard extends Component {
     render() {
 
-        const {authedUser,users,questions} = this.props;
+        const {authedUser, users, questions} = this.props;
 
         // Redirect user if not authenticated
         if (authedUser === null) {
             return <Redirect to={{
                 pathname: '/login',
                 requestedURL: '/',
-            }} />
+            }}/>
         }
 
         return (

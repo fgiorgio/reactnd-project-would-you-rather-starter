@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Redirect,withRouter} from "react-router-dom";
+import {Redirect, withRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
 import {handleSubmitPoll} from "../actions/shared";
@@ -15,13 +15,13 @@ class NewQuestion extends Component {
 
     handleNewPoll = (e) => {
         e.preventDefault()
-        const {optionOne,optionTwo} = this.state;
-        const {dispatch,history} = this.props;
-        dispatch(handleSubmitPoll(optionOne,optionTwo))
+        const {optionOne, optionTwo} = this.state;
+        const {dispatch, history} = this.props;
+        dispatch(handleSubmitPoll(optionOne, optionTwo))
         history.push('/')
     }
 
-    render(){
+    render() {
         const {authedUser} = this.props;
 
         // Redirect user if not authenticated
@@ -29,7 +29,7 @@ class NewQuestion extends Component {
             return <Redirect to={{
                 pathname: '/login',
                 requestedURL: '/add',
-            }} />
+            }}/>
         }
 
         return (

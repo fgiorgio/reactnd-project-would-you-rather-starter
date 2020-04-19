@@ -9,7 +9,7 @@ export function receiveQuestions(questions) {
     }
 }
 
-export function addVote({question,answer,authedUserId}) {
+export function addVote({question, answer, authedUserId}) {
     return {
         type: ADD_VOTE,
         question,

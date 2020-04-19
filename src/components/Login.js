@@ -15,7 +15,7 @@ class Login extends Component {
     handleLogin = (e) => {
         e.preventDefault();
         const {selectedUser} = this.state;
-        const {dispatch, history,location} = this.props;
+        const {dispatch, history, location} = this.props;
         dispatch(setAuthedUser(selectedUser));
         if (location.requestedURL) {
             history.push(location.requestedURL)
