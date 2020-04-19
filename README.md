@@ -8,7 +8,19 @@ Users are able to answer questions, see which questions they haven’t answered,
 
 The `_DATA.js` file represents a fake database and methods that let you access the data.
 
+## Install and Run
 
+Install dependencies running the following command:
+
+```
+npm install
+```
+
+then run the server 
+
+```
+npm start
+```
 
 ## Data
 
