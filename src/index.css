@@ -1,4 +1,4 @@
-html,body {
+html, body {
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -40,7 +40,7 @@ html,body {
 }
 
 /* QUESTION */
-.question-avatar {
+.question-avatar, .leaderboard-avatar {
     width: 100px;
     height: 100px;
     object-fit: cover;
@@ -52,10 +52,13 @@ html,body {
     right: -7px;
 }
 @media (max-width: 576px) {
-    .question-card .card-body {
+    .question-card, .leaderboard-card {
         text-align: center;
     }
-    .question-avatar {
+    .question-avatar, .leaderboard-avatar {
         margin-bottom: 1rem;
+    }
+    .leaderboard-score {
+        margin-top: 1rem;
     }
 }
